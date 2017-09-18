@@ -97,10 +97,34 @@
 
 <script>
     var mescroll = new MeScroll("mescroll", {
+       /* down: {
+            callback: downCallback //下拉刷新的回调
+        },*/
         up: {
+            use:true,
+            auto:false,
+            isBoth:false,
+            noMoreSize:false,
+            offset:false,
             callback: upCallback //上拉加载的回调
         }
     });
+   /* function downCallback() {
+        $.ajax({
+            url: 'xxxxxx',
+            success: function(data) {
+                //联网成功的回调,隐藏下拉刷新的状态;
+                mescroll.endSuccess(); //无参
+                //设置数据
+                //setXxxx(data);//自行实现 TODO
+            },
+            error: function(data) {
+                //联网失败的回调,隐藏下拉刷新的状态
+                mescroll.endErr();
+            }
+        });
+    }*/
+
     /*上拉加载的回调 page = {num:1, size:10}; num:当前页 从1开始, size:每页数据条数 */
     function upCallback(page){
         //联网加载数据
