@@ -14,10 +14,7 @@
   line-height: 1rem;
   color: #788296;
   font-size: 0.28rem;
-  padding: 0 0.34rem;
-}
-.list {
-  overflow: hidden!important;
+  padding: 0 0.48rem;
 }
 .list ul li {
   height: 1rem;
